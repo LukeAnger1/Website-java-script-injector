@@ -1,0 +1,15 @@
+{
+    "name": "JavaScript Logger",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+    "scripting",
+    "activeTab"],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["inject.js"]
+        }
+    ]
+}
+
