@@ -9,12 +9,16 @@ function logEvent(event) {
     }).catch(err => console.error('Logging error:', err));
 }
 
-['click', 'load', 'DOMContentLoaded'].forEach(eventType => {
+// This is a list of events that event listeners can be added to
+// ['click', 'load', 'DOMContentLoaded', 'keypress', 'mousemove']
+['click', 'load', 'DOMContentLoaded', 'keypress', 'mousemove'].forEach(eventType => {
     window.addEventListener(eventType, logEvent, true);
 });
 
 // Override console methods
-['log', 'error', 'warn'].forEach(method => {
+// This is a list of events that event listeners can be added to
+// ['log', 'info', 'error', 'warn', 'debug']
+['log', 'info', 'error', 'warn', 'debug'].forEach(method => {
     const original = console[method];
     console[method] = function(...args) {
         original.apply(this, args);
