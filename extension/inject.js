@@ -11,7 +11,7 @@ function logEvent(event) {
 
 // This is a list of events that event listeners can be added to
 // ['click', 'load', 'DOMContentLoaded', 'keypress', 'mousemove']
-['click', 'load', 'DOMContentLoaded', 'keypress', 'mousemove'].forEach(eventType => {
+['click', 'load', 'DOMContentLoaded', 'keypress'].forEach(eventType => {
     window.addEventListener(eventType, logEvent, true);
 });
 
